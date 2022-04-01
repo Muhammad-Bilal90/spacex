@@ -1,15 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import "bootstrap/dist/css/bootstrap.min.css";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import reportWebVitals from "./reportWebVitals";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
-ReactDOM.render(
+const client = new ApolloClient({
+  uri: "https://spacexdata.herokuapp.com/graphql",
+  cache: new InMemoryCache(),
+});
+
+const rootElement = document.getElementById('root');
+if(!rootElement) throw new Error('Failed to find the root element');
+
+const root = ReactDOM.createRoot(rootElement);
+
+root.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>,
-  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

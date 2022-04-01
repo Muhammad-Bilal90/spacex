@@ -1,0 +1,104 @@
+.homeContainer{
+    background-color: #101518 !important;
+}
+
+.heroImage {
+    background-image: url("./Images/HomeCover.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid grey;
+}
+
+.shade {
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 1.5em;
+    overflow: hidden auto;
+    padding: 50px 0;
+}
+
+
+.missionDetails {
+    align-items: center;
+    max-width: 570px;
+    font-size: 0.8em;
+    margin: 0 30px;
+}
+
+.missionDetails h1 {
+    text-align: center;
+    font-size: 100px;
+    
+}
+
+.missionDetails h6 {
+    line-height: 30px;
+    text-align: center;
+}
+
+.persons {
+    display: flex;
+    justify-content: space-evenly;
+    /* padding-bottom: 35px; */
+    padding: 40px 0;
+}
+
+.person {
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 0 4px whitesmoke;
+    color: white;
+}
+.person h4, .person p {
+    text-align: center;
+}
+
+@media (max-width: 1150px) {
+    .person img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 850px) {
+    .person img {
+        height: 400px;
+    }
+    .persons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .person {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .person img {
+        height: 300px;
+    }
+    .logo {
+        width: 80vw;
+    }
+}
+
+@media (max-height: 450px) {
+    .heroImage {
+        height: 450px;
+    }
+}
+
+@media (max-width: 500px) {
+    .missionDetails {
+        font-size: 0.7em;
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,54 @@
+.navbarWrapper{
+    background-color: #101518;
+    border-color: grey;
+    border-style: solid;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* rgb(56, 53, 53); */
+.iconWrapper{
+    margin-right: 10vw;
+}
+
+.toggleButton{
+    /* color: white; */
+    width: 35px;
+}
+
+/* .navigationButtonsWrapper{    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+} */
+
+.navigationButtons{
+    color: white;
+    background-color: black;
+    width: 20vw;
+    /* height: 30px; */
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 12px;   
+}
+
+.navigationButtons:hover{
+    color: black;
+    background-color: whitesmoke;
+}
+
+.zoom { 
+    transition: transform .2s; /* Animation */
+    width: 200px;
+    height: 100px;
+    background-color: #101518;
+    color: white
+}
+  
+.zoom:hover {
+    transform: scale(0.9); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
