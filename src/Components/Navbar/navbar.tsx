@@ -1,6 +1,6 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Logo from './Images/icon1.jpg';
+import Logo from './Images/Logo.jpeg';
 import toggle from './Images/toggle.png';
 import './styles.css';
 import {Link} from 'react-router-dom';
@@ -8,15 +8,15 @@ import {Link} from 'react-router-dom';
 const NavigationBar = () => {
     return (
         <>
-            <Navbar className='navbarWrapper' expand="xl">
+            <Navbar data-testid="navbar" className='navbarWrapper' expand="xl">
                 <div className='iconWrapper'>
-                    <Link to='/'>
+                    {/* <Link to='/'> */}
                         <Navbar.Brand href="#home" ><img src={Logo} className='zoom' alt="Logo" /></Navbar.Brand>
-                    </Link>
+                    {/* </Link> */}
                 </div>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"> <img className="toggleButton" alt="toggle" src={toggle} ></img> </Navbar.Toggle>
                 <Navbar.Collapse className="collapseMenu" id="basic-navbar-nav">
-                    <Nav className='mr-auto'>
+                    {/* <Nav className='mr-auto'> */}
                         <div>
                             <Link to='/missionItems'>
                             <button className="navigationButtons">
@@ -34,7 +34,7 @@ const NavigationBar = () => {
                             </button>
                             </Link>
                         </div>
-                    </Nav>
+                    {/* </Nav> */}
                 </Navbar.Collapse>
             </Navbar>
         </>

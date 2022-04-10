@@ -9,11 +9,11 @@ interface Props {
 }
 
 const Home: React.FC<Props> = ({ data }) => {
-    // console.log(data);
+    console.log(data);
 
     return (
 
-        <div className={styles.homeContainer}>
+        <div title='companyInfo' className={styles.homeContainer}>
             <div className={styles.heroImage}>
                 <div className={styles.shade}>
                     <div className={styles.missionDetails}>
