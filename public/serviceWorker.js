@@ -20,7 +20,7 @@ const cacheAssets = [
   './rockets',
   './ships',
   './missions',
-  'index.html',
+  './index.html',
 
   // './static/js/2.405b4e47.chunk.js',
   // './static/js/main.59905b3f.chunk.js',
