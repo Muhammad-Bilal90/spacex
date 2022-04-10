@@ -16,28 +16,28 @@ const cacheAssets = [
 
 
  const cacheAssets = [
-  '/',
-  '/rockets',
-  '/ships',
-  '/missions',
+  './',
+  './rockets',
+  './ships',
+  './missions',
   'index.html',
 
-  './static/js/2.405b4e47.chunk.js',
-  './static/js/main.59905b3f.chunk.js',
-  './static/js/runtime-main.81435ab8.js',
-  './static/css/2.11829350.chunk.css',
-  './static/css/main.4f713c0b.chunk.css',
+  // './static/js/2.405b4e47.chunk.js',
+  // './static/js/main.59905b3f.chunk.js',
+  // './static/js/runtime-main.81435ab8.js',
+  // './static/css/2.11829350.chunk.css',
+  // './static/css/main.4f713c0b.chunk.css',
   
   // --------------------------------------------
 
-  '/static/media/Logo.02af421525793ce695ee.jpeg',
-  '/static/media/toggle.9edfd30de83ab8492410.png',
-  '/static/media/ElonMusk.708085ec661e17ef28cd.jpg',
-  '/static/media/GwynneShotwell.8c91e3994d090fcce849.jpg',
-  '/static/media/TomMuller.7f9dffb35034207ee09a.jpg',
-  '/static/media/HomeCover.60fb50b75b063d18e12d.jpg',
-  '/static/media/no_image_available.b59890b7b479e863e07c.jpg',
-  '/static/js/main.1e2c9118.js',
+  './static/media/Logo.02af421525793ce695ee.jpeg',
+  './static/media/toggle.9edfd30de83ab8492410.png',
+  './static/media/ElonMusk.708085ec661e17ef28cd.jpg',
+  './static/media/GwynneShotwell.8c91e3994d090fcce849.jpg',
+  './static/media/TomMuller.7f9dffb35034207ee09a.jpg',
+  './static/media/HomeCover.60fb50b75b063d18e12d.jpg',
+  './static/media/no_image_available.b59890b7b479e863e07c.jpg',
+  './static/js/main.1e2c9118.js',
 
  ];
 
@@ -46,7 +46,7 @@ const cacheAssets = [
 
 
 
-
+// Creating Install Event
 
  self.addEventListener('install', (event) => {
   console.log('Service Worker: Installed');
@@ -66,7 +66,7 @@ const cacheAssets = [
 
 
 
-
+// Creating Fetch Event
 
 self.addEventListener('fetch', event => {
   console.log('Fetch event for ', event.request.url);
@@ -79,9 +79,7 @@ self.addEventListener('fetch', event => {
       }
       console.log('Network request for ', event.request.url);
       return fetch(event.request)
-
       .then(response => {
-        
         return caches.open(cacheName).then(cache => {
           if (response.type === "basic"){
           cache.put(event.request.url, response.clone());
@@ -107,7 +105,7 @@ self.addEventListener('fetch', event => {
   );
 });
 
-
+// Creating Activate Event
 
 self.addEventListener('activate', event => {
   console.log('Activating new service worker...');

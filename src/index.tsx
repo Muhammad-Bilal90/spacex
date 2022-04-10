@@ -5,7 +5,7 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
-import swDev from "./swDev";
+import swDev from "./Services/serviceRegister";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
