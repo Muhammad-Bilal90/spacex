@@ -1,5 +1,4 @@
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
 import Logo from './Images/Logo.jpeg';
 import toggle from './Images/toggle.png';
 import './styles.css';

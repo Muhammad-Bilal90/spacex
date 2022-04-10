@@ -1,6 +1,5 @@
 import React from "react";
-import { Table, Image } from "react-bootstrap";
-import NO_IMAGE from "../Images/no_image_available.jpg";
+import { Table } from "react-bootstrap";
 
 interface Props {
   data: {
