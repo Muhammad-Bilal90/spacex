@@ -1,3 +1,19 @@
 [build]
   command = "npm run build"
-  publish = "build/"  
+  publish = "build/"
+
+  [[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+    #  Multi-value headers are expressed with multi-line strings
+	cache-control = '''
+	max-age=0,
+	no-cache,
+	no-store,
+	must-revalidate'''
+
+    # The Basic-Auth header may not be available on all plans.
+    Basic-Auth = "someuser:somepassword anotheruser:anotherpassword"
