@@ -1,6 +1,5 @@
 {
   "name": "spacex",
-  "homepage": "https://muhammad-bilal90.github.io/spacex",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,8 +29,6 @@
     "workbox-streams": "^5.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
