@@ -39,4 +39,5 @@ jobs:
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_SPACEX_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITEID }}
+        NETLIFY_DEPLOY_TO_PROD: true
       run: netlify deploy --prod
