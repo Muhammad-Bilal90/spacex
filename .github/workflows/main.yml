@@ -240,4 +240,4 @@ jobs:
         run: npm install -g surge
         
       - name: deploying on surge
-        run: surge ./build http://spacex-pwa.surge.sh/ --token ${{secrets.SPACEX_TOKEN}
+        run: surge ./build http://spacex-pwa.surge.sh/ --token ${{secrets.SPACEX_TOKEN}}
