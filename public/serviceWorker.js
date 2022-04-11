@@ -21,6 +21,7 @@ const cacheAssets = [
   './ships',
   './missions',
   './index.html',
+  "./static/js/bundle.js",
 
   // './static/js/2.405b4e47.chunk.js',
   // './static/js/main.59905b3f.chunk.js',
